@@ -1,0 +1,62 @@
+package com.main;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+    Scanner input= new Scanner(System.in);
+        
+    System.out.println("Enter a number: ");
+int num = input.nextInt();
+        for (int i =1 ; i <10; i++ ) { 
+            System.out.println(num +"×"+i+"="+(num*i));}
+        //Q1
+        //Q2
+        System.out.println("Question1: What is 2+2?");
+        int answer = input.nextInt();
+        System.out.println("Answer: "+answer);
+        if (answer==4){System.out.println("Correct !Welcome to level 2");}
+        else if (answer!=4){System.out.println("Wrong! Game Over"); return;}
+        System.out.println("Question2: What is the capital of France?");
+         input.nextLine();
+        String cap= input.next();
+        if(cap.equals("Paris")){System.out.println("Correct!Welcome to level 3");}
+        else if (!cap.equals("Paris")) {System.out.println("Wrong!Game Over");return;}
+        System.out.println("Question3: Who devoloped java?");
+        input.nextLine();
+        String na = input.nextLine();
+        if(na.equals("James Gosling")){System.out.println("Congratulations! You won the quiz");}
+        else if (!na.equals("James Gosling")){System.out.println("Wrong!Game Over");}
+        //Q3
+        
+        int sum = 0;
+
+        for (int i = 0; i < 10; i++) {System.out.print("Enter number: ");
+            int g = input.nextInt();
+            if (g == 0) {break;}
+            if (g < 0) {continue;}
+            sum += g;}
+        System.out.println("Sum of positive numbers = " + sum);
+        //Q4
+        
+        System.out.print("Enter a positive number: ");
+        int n = input.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {System.out.print("*");}
+            System.out.println();}
+        //Q5
+        
+        while(true){System.out.println("Enter age: ");int a=input.nextInt();
+         if (a>= 18){System.out.println("You are allowed");}
+        else if (a<0){System.out.println("Invaild age"); continue;}
+            else if (a<18){System.out.println("You are not allowed");break;}}
+        //Q6
+        while(true){System.out.println("Enter 2tempratures");
+            double t=input.nextDouble();
+            double t2= input.nextDouble(); double r =t-t2;
+            if(t==1){break;}
+            else if(r>4){System.out.println("Sudden change detected");}
+            else if (r<5){System.out.println("Normal change");}}
+            
+    }
+}
